@@ -35,7 +35,7 @@ export default function Testimonials() {
 
   return (
     <section id="testimonials" className="py-20">
-      <div className="container px-4 md:px-6">
+      <div className="w-full max-w-[1375px] mx-auto container px-4 md:px-6">
         <motion.div
           className="text-center space-y-4 mb-12"
           initial={{ opacity: 0, y: 30 }}
@@ -46,8 +46,8 @@ export default function Testimonials() {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Lo que dicen nuestros usuarios
           </h2>
-          <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-            Profesionales médicos que han mejorado la gestión de sus consultas con MediAgenda
+          <p className="mx-auto max-w-[700px] text-muted-foreground md:text-md">
+            Profesionales médicos que han mejorado la gestión de sus consultas con Medi-Appointment
           </p>
         </motion.div>
 
@@ -86,8 +86,9 @@ export default function Testimonials() {
                           <Image
                             src={testimonial.avatar}
                             alt={testimonial.name}
-                            fill
-                            className="object-cover"
+                            width={40}
+                            height={40}
+                            className="rounded-full object-cover"
                           />
                         </div>
                         <div>
