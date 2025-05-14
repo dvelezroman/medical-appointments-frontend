@@ -47,14 +47,17 @@
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
+  --header-bg: oklch(0.98 0 0); 
+  --text-heading: oklch(0.55 0.18 265); 
+  --text-default: oklch(0.2 0 0); 
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
+  --primary: oklch(0.52 0.1 260);     
+  --primary-foreground: oklch(0.98 0.01 260);
+  --secondary: oklch(0.85 0.05 260);
+  --secondary-foreground: oklch(0.2 0.02 260);
   --muted: oklch(0.968 0.007 247.896);
   --muted-foreground: oklch(0.554 0.046 257.417);
   --accent: oklch(0.968 0.007 247.896);
@@ -81,14 +84,17 @@
 .dark {
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);
+  --header-bg: oklch(0.15 0 0); 
+  --text-heading: oklch(0.85 0.1 265);
+  --text-default: oklch(0.98 0.01 260);
   --card: oklch(0.208 0.042 265.755);
   --card-foreground: oklch(0.984 0.003 247.858);
   --popover: oklch(0.208 0.042 265.755);
   --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.8 0.05 260);    
+  --primary-foreground: oklch(0.2 0.02 260);
+  --secondary: oklch(0.52 0.1 260);    
+  --secondary-foreground: oklch(0.98 0.01 260);
   --muted: oklch(0.279 0.041 260.031);
   --muted-foreground: oklch(0.704 0.04 256.788);
   --accent: oklch(0.279 0.041 260.031);
@@ -118,5 +124,39 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+}
+
+@layer utilities {
+  .text-default {
+    @apply text-[color:var(--text-default)];
+  }
+
+  .text-heading {
+    @apply text-[color:var(--text-heading)];
+  }
+
+  .bg-header {
+    background-color: var(--header-bg);
+  }
+  @media (min-width: 800px) {
+    .flex-at-800 {
+      display: flex;
+    }
+
+    .inline-flex-at-800 {
+      display: inline-flex;
+    }
+
+    .hidden-at-800 {
+      display: none;
+    }
+  }
+
+  @media (max-width: 799px) {
+    .hidden-below-800 {
+      display: none;
+    }
   }
 }
