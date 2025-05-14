@@ -34,15 +34,15 @@ export default function CTA() {
             </p>
             <ul className="space-y-2">
               <li className="flex items-center gap-2">
-                <Check className="h-4 w-4 text-gray-300" />
+                <Check className="h-4 w-4 text-gray-300 dark:text-gray-800/80" />
                 Acceso inmediato al panel de pacientes
               </li>
               <li className="flex items-center gap-2">
-                <Check className="h-4 w-4 text-gray-300" />
+                <Check className="h-4 w-4 text-gray-300 dark:text-gray-800/80" />
                 Configuración rápida de tu primera agenda médica
               </li>
               <li className="flex items-center gap-2">
-                <Check className="h-4 w-4 text-gray-300" />
+                <Check className="h-4 w-4 text-gray-300 dark:text-gray-800/80" />
                 Asistencia personalizada para digitalizar tu consulta
               </li>
             </ul>

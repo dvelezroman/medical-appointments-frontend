@@ -57,7 +57,7 @@ export default function Testimonials() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <Carousel className="w-full max-w-5xl mx-auto">
+          <Carousel className="w-full max-w-5xl mx-auto relative overflow-x-auto sm:overflow-hidden">
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 p-2">
@@ -101,8 +101,8 @@ export default function Testimonials() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-0 sm:-left-12" />
-            <CarouselNext className="right-0 sm:-right-12" />
+            <CarouselPrevious className="left-2 bg-muted hover:bg-muted/80 rounded-full shadow" />
+            <CarouselNext className="right-2 bg-muted hover:bg-muted/80 rounded-full shadow" />
           </Carousel>
         </motion.div>
       </div>

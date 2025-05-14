@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function Header() {
   return (
-    <header className="top-0 z-50 w-full bg-background transition-colors duration-300 ease">
+    <header className=" sticky top-0 z-50 w-full bg-background transition-colors duration-300 ease">
       <motion.div
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -22,14 +22,14 @@ export default function Header() {
             Registrarse
           </Button>
         </Link>
-        {/* <Link href="/auth/login">
+        <Link href="/auth/login">
           <Button
             className="px-3 py-2 text-sm sm:px-6 sm:py-2 sm:text-md"
             variant="default"
           >
             Iniciar Sesión
           </Button>
-        </Link> */}
+        </Link>
         <ModeToggle />
       </motion.div>
     </header>
