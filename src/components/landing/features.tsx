@@ -1,52 +1,6 @@
-"use client"
-
-import { useRef, useEffect } from "react"
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Calendar, Users, ClipboardList, Bell, Shield, BarChart } from "lucide-react"
 
 export default function Features() {
-  const sectionRef = useRef(null)
-  const titleRef = useRef(null)
-  const featureRefs = useRef<HTMLDivElement[]>([])
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-
-    gsap.from(titleRef.current, {
-      y: 50,
-      opacity: 0,
-      duration: 0.8,
-      scrollTrigger: {
-        trigger: titleRef.current,
-        start: "top 80%",
-      },
-    })
-
-    featureRefs.current.forEach((feature, index) => {
-      gsap.from(feature, {
-        y: 50,
-        opacity: 0,
-        duration: 0.6,
-        delay: index * 0.1,
-        scrollTrigger: {
-          trigger: feature,
-          start: "top 85%",
-        },
-      })
-    })
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
-    }
-  }, [])
-
-  const addToRefs = (el: HTMLDivElement | null) => {
-    if (el && !featureRefs.current.includes(el)) {
-      featureRefs.current.push(el);
-    }
-  };
-
   const features = [
     {
       icon: <Calendar className="h-10 w-10 text-primary" />,
@@ -81,9 +35,9 @@ export default function Features() {
   ]
 
   return (
-    <section id="features" ref={sectionRef} className="py-20 bg-muted/50">
+    <section id="features" className="py-20 bg-muted/50">
       <div className="container px-4 md:px-6 mx-auto">
-        <div ref={titleRef} className="text-center space-y-4 mb-12 mx-auto">
+        <div className="text-center space-y-4 mb-12 mx-auto">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Características diseñadas para profesionales médicos
           </h2>
@@ -96,7 +50,6 @@ export default function Features() {
           {features.map((feature, index) => (
             <div
               key={index}
-              ref={addToRefs}
               className="bg-background rounded-lg p-6 shadow-sm border hover:shadow-md transition-shadow"
             >
               <div className="mb-4">{feature.icon}</div>
