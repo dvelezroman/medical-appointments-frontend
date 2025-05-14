@@ -16,9 +16,10 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="space-y-6"
           >
-            <h1 className="text-4xl sm:text-6xl md:text-6xl font-bold text-balance sm:mx-0 text-default">
-              <span className="text-heading">Gestione sus citas médicas</span>{' '}
-              <span className="text-gray-500 dark:text-gray-300 font-light">con eficiencia y precisión</span>
+            <h1 className="text-4xl sm:text-6xl md:text-6xl font-bold text-balance sm:mx-0">
+              <span className="bg-gradient-to-r from-blue-600 to-blue-400 dark:from-blue-400 dark:to-blue-100 bg-clip-text text-transparent">
+                Gestione sus citas médicas con eficiencia y precisión
+              </span>
             </h1>
             <p className="text-muted-foreground text-sm md:text-lg dark:text-gray-300">
               Medi-Appointment le permite organizar su agenda, gestionar pacientes y tratamientos en una sola plataforma intuitiva diseñada específicamente para profesionales de la salud.
@@ -41,22 +42,6 @@ export default function Hero() {
               priority
             />
           </motion.div>
-
-          {/* Botón
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-            viewport={{ once: true }}
-            className="w-full flex justify-center sm:justify-start sm:col-span-2 md:col-span-1 md:col-start-1"
-          >
-            <Link href="/auth/login">
-              <Button className="px-3 py-4 text-sm sm:px-6 sm:py-3 md:py-5 md:px-7 sm:text-md" variant="default">
-                Iniciar Sesión
-              </Button>
-            </Link>
-          </motion.div> */}
-
         </div>
       </div>
     </section>
